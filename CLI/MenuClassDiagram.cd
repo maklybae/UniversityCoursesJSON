@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CLI.HomePage">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAABAAAAAAAAAgAAEAAAAAAIAAAEAAAAAA=</HashCode>
+      <FileName>HomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.AppMenu">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAgAAAAABAAAACQAAAAAABAAA=</HashCode>
+      <FileName>AppMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.ConsoleDialog">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAACAAAgAAAAIAAAAAAAAQBAAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>ConsoleDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.FileManagerPage">
+    <Position X="11.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAEIAAFAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileManagerPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.MenuPage">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAAQBAAAg=</HashCode>
+      <FileName>MenuPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.PrintingPage">
+    <Position X="5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAABAAAAAAAAAAIABAAAAAAAAAAAAA=</HashCode>
+      <FileName>PrintingPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.SavingPage">
+    <Position X="9.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADIQAAAAACAAAAAAAAAAAAAAAAIAAAAAAAAAAQAgA=</HashCode>
+      <FileName>SavingPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.SelectionPage">
+    <Position X="14" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAEAAAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SelectionPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.SettingUpPage">
+    <Position X="2.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAACA=</HashCode>
+      <FileName>SettingUpPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLI.SortingPage">
+    <Position X="7.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAABAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SortingPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
