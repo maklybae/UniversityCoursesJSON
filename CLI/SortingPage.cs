@@ -7,7 +7,7 @@ namespace CLI;
 /// </summary>
 internal class SortingPage : MenuPage
 {
-    private List<string> _selectedFields = new List<string>();
+    private List<string> _selectedFields = new();
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SortingPage"/> class.

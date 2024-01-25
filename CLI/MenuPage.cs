@@ -5,10 +5,10 @@
 /// </summary>
 internal abstract class MenuPage
 {
-    // List of options, each containing an action and a description
+    // List of options, each containing an action and a description.
     private List<(Action? optionAction, string optionDescription)> _options;
 
-    // The index of the currently selected option
+    // The index of the currently selected option.
     private int _currentOption = 0;
 
     /// <summary>
@@ -28,7 +28,7 @@ internal abstract class MenuPage
         get { return _currentOption; }
         set
         {
-            // Ensure the index stays within the bounds of the options list (circular navigation)
+            // Ensure the index stays within the bounds of the options list (circular navigation).
             _currentOption = (value % Options.Count + Options.Count) % Options.Count;
         }
     }
