@@ -149,7 +149,7 @@ public static class CourseHelper
         
         for (int i = 1; i < keys.Count; i++)
         {
-            orderer = SecondarySorterByAlternativeName(orderer, keys[0], sortingOptions[keys[0]]);
+            orderer = SecondarySorterByAlternativeName(orderer, keys[i], sortingOptions[keys[i]]);
         }
 
         return orderer?.ToList() ?? courses;
