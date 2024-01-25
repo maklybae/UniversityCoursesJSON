@@ -50,7 +50,7 @@ internal abstract class MenuPage
         for (int i = 0; i < Options.Count; i++)
         {
             if (i == CurrentOption)
-                ConsoleOutput.PrintSelected(Options[i].optionDescription);
+                    ConsoleOutput.PrintSelected(Options[i].optionDescription);
             else
                 Console.WriteLine(Options[i].optionDescription);
         }

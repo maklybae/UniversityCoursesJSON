@@ -106,8 +106,9 @@ internal static class ConsoleOutput
     {
         Console.BackgroundColor = ConsoleColor.White;
         Console.ForegroundColor = ConsoleColor.Black;
-        Console.WriteLine(text);
+        Console.Write(text);
         Console.ResetColor();
+        Console.WriteLine();
     }
 
     /// <summary>

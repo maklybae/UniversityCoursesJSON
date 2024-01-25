@@ -6,7 +6,7 @@ namespace CLI;
 /// </summary>
 internal static class AppMenu
 {
-    // Stack to manage navigation between different menu pages
+    // Stack to manage navigation between different menu pages.
     private static Stack<MenuPage> MenuPagesStack { get; }
 
     /// <summary>
@@ -41,36 +41,57 @@ internal static class AppMenu
     internal static void PopMenuPageFromStack() => MenuPagesStack.Pop();
 
     /// <summary>
+    /// Method to clear all data usage properties.
+    /// </summary>
+    internal static void ClearAll()
+    {
+        MenuPagesStack.Clear();
+        MenuPagesStack.Push(new HomePage());
+        MenuPagesStack.Push(new SettingUpPage());
+        CoursesData = null;
+        PreviousFilePath = null;
+    }
+
+    /// <summary>
     /// Method to display the menu and handle user interaction.
     /// </summary>
     internal static void ShowMenu()
     {
-        // Hide the cursor for a cleaner interface
-        Console.CursorVisible = false;
-
-        // Print the initial help page with instructions
-        ConsoleDialog.PrintHelpPage();
-
-        // Continue showing the menu until the application exits
-        while (true)
+        try
         {
-            // Get the current menu page from the top of the stack
-            MenuPage currentPage = MenuPagesStack.Peek();
-            currentPage.DrawPage();
+            // Hide the cursor for a cleaner interface.
+            Console.CursorVisible = false;
 
-            // Handle user input based on arrow keys and Enter key
-            switch (Console.ReadKey(true).Key)
+            // Print the initial help page with instructions.
+            ConsoleDialog.PrintHelpPage();
+
+            // Continue showing the menu until the application exits.
+            while (true)
             {
-                case ConsoleKey.Enter:
-                    currentPage.ExecuteCurrentOption();
-                    break;
-                case ConsoleKey.UpArrow:
-                    currentPage.CurrentOption--;
-                    break;
-                case ConsoleKey.DownArrow:
-                    currentPage.CurrentOption++;
-                    break;
+                // Get the current menu page from the top of the stack.
+                MenuPage currentPage = MenuPagesStack.Peek();
+                currentPage.DrawPage();
+
+                // Handle user input based on arrow keys and Enter key.
+                switch (Console.ReadKey(true).Key)
+                {
+                    case ConsoleKey.Enter:
+                        currentPage.ExecuteCurrentOption();
+                        break;
+                    case ConsoleKey.UpArrow:
+                        currentPage.CurrentOption--;
+                        break;
+                    case ConsoleKey.DownArrow:
+                        currentPage.CurrentOption++;
+                        break;
+                }
             }
+        }
+        // Proceeding unexpected behaviour of the program.
+        catch (Exception ex)
+        {
+            ConsoleOutput.PrintIssue($"Unexpected issue: {ex.Message}", "Try again", true);
+            ClearAll();
         }
     }
 

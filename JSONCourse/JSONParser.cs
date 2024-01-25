@@ -26,7 +26,7 @@ public static class JSONParser
 ""enrollment"":\s*(?<enrollment>\d+),\s*
 ""is_online"":\s*(?<is_online>true|false),\s*
 ""students"":\s*\[(?>\s*""(?<students>[^""]*)"",?)*\s*\]\s*";
-    private static readonly string JSONCourseObjectPattern = @"  {{
+    private const string JSONCourseObjectPattern = @"  {{
     ""course_id"": {0},
     ""course_name"": ""{1}"",
     ""instructor"": ""{2}"",
