@@ -8,7 +8,7 @@ namespace CLI;
 internal static class ConsoleOutput
 {
     // ASCII art titles for success and welcome
-    private static readonly string ASCIISuccess = $"{Environment.NewLine}   " +
+    private static readonly string s_asciiSuccess = $"{Environment.NewLine}   " +
         $".-'''-.   ___    _     _______       _______      .-''-.     .-'''-" +
         $".    .-'''-.  {Environment.NewLine}  / _     \\.'   |  | |   /   __" +
         $"  \\     /   __  \\   .'_ _   \\   / _     \\  / _     \\ " +
@@ -28,7 +28,7 @@ internal static class ConsoleOutput
         $"         {Environment.NewLine}";
 
     // Fun title Welcome.
-    private static readonly string ASCIIWelcome = $".--.      .--.    .-''-.  " +
+    private static readonly string s_asciiWelcome = $".--.      .--.    .-''-.  " +
         $"  .---.        _______      ,-----.    ,---.    ,---.    .-''-.   " +
         $"{Environment.NewLine}|  |_     |  |  .'_ _   \\   | ,_|       /   __ " +
         $" \\   .'  .-,  '.  |    \\  /    |  .'_ _   \\  {Environment.NewLine}|" +
@@ -61,7 +61,7 @@ internal static class ConsoleOutput
         }
         else
         {
-            Console.WriteLine(ASCIISuccess);
+            Console.WriteLine(s_asciiSuccess);
         }
         Console.ForegroundColor = ConsoleColor.White;
 
@@ -83,7 +83,7 @@ internal static class ConsoleOutput
         }
         else
         {
-            Console.WriteLine(ASCIIWelcome);
+            Console.WriteLine(s_asciiWelcome);
         }
         Console.ForegroundColor = ConsoleColor.White;
     }

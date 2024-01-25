@@ -23,27 +23,37 @@ internal class FileManagerPage : MenuPage
         Options.Clear();
 
         // Add drives as options
+        Options.Add((null, "==Drives=="));
         var drives = Array.ConvertAll(DriveInfo.GetDrives(), drive => drive.Name);
         foreach (var drive in drives)
         {
             Options.Add((OpenDirectory, drive));
         }
+        Options.Add((null, string.Empty));
 
         // Add the parent directory as an option if it exists and is not a drive
         if (_currentDirectory.Parent != null && !drives.Contains(_currentDirectory.Parent.FullName))
+        {
+            Options.Add((null, "==Parent directory=="));
             Options.Add((OpenDirectory, _currentDirectory.Parent.FullName));
+            Options.Add((null, string.Empty));
+        }
 
         // Add directories as options
+        Options.Add((null, "==Directories in the current directory=="));
         foreach (var directory in _currentDirectory.EnumerateDirectories())
         {
             Options.Add((OpenDirectory, directory.FullName));
         }
+        Options.Add((null, string.Empty));
 
         // Add JSON files in the current directory as options
+        Options.Add((null, "==JSON Files in the current directory=="));
         foreach (var file in _currentDirectory.EnumerateFiles("*.json"))
         {
             Options.Add((OpenFile, file.FullName));
         }
+        Options.Add((null, string.Empty));
 
         Options.Add((MoveToPreviousPage, "Back to menu"));
 

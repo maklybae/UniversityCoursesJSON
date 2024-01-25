@@ -6,7 +6,7 @@
 internal abstract class MenuPage
 {
     // List of options, each containing an action and a description
-    private List<(Action optionAction, string optionDescription)> _options;
+    private List<(Action? optionAction, string optionDescription)> _options;
 
     // The index of the currently selected option
     private int _currentOption = 0;
@@ -14,7 +14,7 @@ internal abstract class MenuPage
     /// <summary>
     /// Gets or sets the list of options for this menu page.
     /// </summary>
-    protected List<(Action optionAction, string optionDescription)> Options
+    protected List<(Action? optionAction, string optionDescription)> Options
     {
         get { return _options; }
         init { _options = value; }
@@ -38,7 +38,7 @@ internal abstract class MenuPage
     /// </summary>
     protected MenuPage()
     {
-        _options = new List<(Action optionAction, string optionDescription)>();
+        _options = new List<(Action? optionAction, string optionDescription)>();
     }
 
     /// <summary>
