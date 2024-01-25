@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONCourse", "JSONCourse\JSONCourse.csproj", "{7F4F74B8-8218-4490-8643-6CDFCA4C7C22}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLI", "CLI\CLI.csproj", "{CCD912AB-BD2D-4747-9DFE-3B489B9F3135}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONCourse", "JSONCourse\JSONCourse.csproj", "{7F4F74B8-8218-4490-8643-6CDFCA4C7C22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
